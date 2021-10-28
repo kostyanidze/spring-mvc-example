@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Список записей в БД</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Список записей в БД:</h1>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Кому</th>
+        <th scope="col">Тема</th>
+        <th scope="col">Сообщение</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="email: ${emails}">
+        <td th:text="${email.to}">
+        </td>
+        <td th:text="${email.subject}">
+        </td>
+        <td th:text="${email.message}">
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Отправить другое сообщение</a>
+</body>
+</html>
