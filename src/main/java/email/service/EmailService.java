@@ -23,7 +23,7 @@ public class EmailService {
     }
 
     public Email getEmailById(Integer id) {
-        return emailRepository.getOne(id);
+        return emailRepository.getById(id);
     }
 
     public void delete(Integer setId) {
