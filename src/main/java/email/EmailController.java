@@ -26,7 +26,7 @@ public class EmailController {
     @PostMapping("/sendEmail")
     public String sendEmail(@ModelAttribute EmailForm emailForm, Model model) {
         if (emailForm.getTo().isEmpty()) {
-            model.addAttribute("error", "'Кому' не должно быть пустым");
+            model.addAttribute("error", "Поле 'Ваш e-mail для обратной связи' не должно быть пустым");
             return "index";
         }
         emailService.save(new Email(emailForm.getTo(), emailForm.getSubject(), emailForm.getMessage()));

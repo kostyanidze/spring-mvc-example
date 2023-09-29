@@ -33,12 +33,19 @@
                         Возможные направления турполёта
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Пункт 1</a></li>
-                        <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                        <div style="font-weight: bold" >
+                            <div style="text-align: center;">Азия</div>
+                        </div>
+                        <li><a class="dropdown-item" href="#">Китай</a></li>
+                        <li><a class="dropdown-item" href="#">Япония</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Пункт 3</a></li>
+                        <div style="font-weight: bold" >
+                            <div style="text-align: center;">Северная америка</div>
+                        </div>
+                        <li><a class="dropdown-item" href="#">Канада</a></li>
+                        <li><a class="dropdown-item" href="#">Соединенные штаты Америки</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -65,7 +72,7 @@
                     <input class="form-control" type="email" id="to" th:field="*{to}" placeholder="stairwaytoheaven777@ya.ru"/>
                 </div>
                 <div class="form-group">
-                    <label for="message">Напишите ваши пожелания</label>
+                    <label for="message">Пожелания</label>
                     <textarea class="form-control" id="message" th:field="*{message}" placeholder="Отель 5 звезд, двухразовое питание и т.д."/>
                 </div>
                 <input class="form-group" type="submit" value="Отправить"/>

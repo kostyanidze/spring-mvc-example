@@ -13,7 +13,7 @@
 </head>
 <body>
 <!-- компонент меню-->
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg b">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Турфирма «3 кита»</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -26,23 +26,27 @@
                     <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/list">Список отправленных сообщений</a>
+                    <a class="nav-link text-" href="/list">Список отправленных сообщений</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/ajax">Динамическая страница</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="dropdown" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Возможные направления турполёта
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Пункт 1</a></li>
-                        <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                    <ul class="dropdown-menu" style="font-weight: bold;text-align: center;">Азия"
+            <li><a class="dropdown-item" href="#">Китай</a></li>
+            <li><a class="dropdown-item" href="#">Япония</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Пункт 3</a></li>
+                        <div style="font-weight: bold" >
+                            <div style="text-align: center;">Северная америка</div>
+                        </div>
+                        <li><a class="dropdown-item" href="#">Канада</a></li>
+                        <li><a class="dropdown-item" href="#">Соединенные штаты Америки</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -53,20 +57,20 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid" style="font-size: 2.1vw; font-size: 2.1vh">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-sm-12">
             <h2>Список записей в БД:</h2>
             <div class="row">
-                <div class="col-md-2" style="font-weight: bold">
-                    Кому
+                <div class="col-4" style="font-weight: bold">
+                    Ваш e-mail
                 </div>
-                <div class="col-md-4" style="font-weight: bold">
-                    Тема
+                <div class="col-4" style="font-weight: bold">
+                    Страна отправления
                 </div>
-                <div class="col-md-4" style="font-weight: bold">
-                    Сообщение
+                <div class="col-3" style="font-weight: bold">
+                    Пожелания
                 </div>
             </div>
             <div class="row" id="records">
@@ -82,7 +86,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#editModal').modal('hide');">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -90,15 +94,15 @@
                     <p style="color:red"></p>
                     <div class="d-none" id="editId"></div>
                     <div class="form-group">
-                        <label for="editSubject">Тема</label>
+                        <label for="editSubject">Страна отправления</label>
                         <input type="text" class="form-control" id="editSubject" placeholder="Введите тему">
                     </div>
                     <div class="form-group">
-                        <label for="editTo">Кому</label>
+                        <label for="editTo">Ваш e-mail для обратной связи</label>
                         <input class="form-control" type="email" id="editTo" placeholder="Кому"/>
                     </div>
                     <div class="form-group">
-                        <label for="editMessage">Сообщение</label>
+                        <label for="editMessage">Пожелания</label>
                         <textarea class="form-control" id="editMessage" placeholder="Сообщение"></textarea>
                     </div>
                 </div>

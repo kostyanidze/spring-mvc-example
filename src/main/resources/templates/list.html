@@ -34,12 +34,19 @@
                         Возможные направления турполёта
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Пункт 1</a></li>
-                        <li><a class="dropdown-item" href="#">Пункт 3</a></li>
+                        <div style="font-weight: bold" >
+                            <div style="text-align: center;">Азия</div>
+                        </div>
+                        <li><a class="dropdown-item" href="#">Китай</a></li>
+                        <li><a class="dropdown-item" href="#">Япония</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Пункт 3</a></li>
+                        <div style="font-weight: bold" >
+                            <div style="text-align: center;">Северная америка</div>
+                        </div>
+                        <li><a class="dropdown-item" href="#">Канада</a></li>
+                        <li><a class="dropdown-item" href="#">Соединенные штаты Америки</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -50,26 +57,26 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid" style="font-size: 2.1vw; font-size: 2.1vh">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-sm-12">
             <h2>Список записей в БД:</h2>
             <div class="row">
-                <div class="col-md-4" style="font-weight: bold">
-                    Кому
+                <div class="col-4" style="font-weight: bold">
+                    Ваш e-mail
                 </div>
-                <div class="col-md-4" style="font-weight: bold">
-                    Тема
+                <div class="col-4" style="font-weight: bold">
+                    Страна отправления
                 </div>
-                <div class="col-md-4" style="font-weight: bold">
-                    Сообщение
+                <div class="col-4" style="font-weight: bold">
+                    Пожелания
                 </div>
             </div>
             <div class="row" th:each="email: ${emails}">
-                <div class="col-md-4" th:text="${email.to}"/>
-                <div class="col-md-4" th:text="${email.subject}"/>
-                <div class="col-md-4" th:text="${email.message}"/>
+                <div class="col-4" th:text="${email.to}"/>
+                <div class="col-4" th:text="${email.subject}"/>
+                <div class="col-4" th:text="${email.message}"/>
             </div>
 
             <!--<table class="table table-striped">

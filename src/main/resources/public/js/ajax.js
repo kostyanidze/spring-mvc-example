@@ -40,10 +40,10 @@ function loadList() {
         $.get("ajax/list", function( data ) {
             $.each(data, function(key, value) {
                 $("#records").append(
-                    "<div class='col-md-2'>"+value.to+"</div>"+
-                    "<div class='col-md-4'>"+value.subject+"</div>"+
-                    "<div class='col-md-4'>"+value.message+"</div>"+
-                    "<div class='col-md-2' onclick='edit("+value.id+")'><i class='fa-solid fa-pen-to-square'></i></div>"
+                    "<div class='col-4'>"+value.to+"</div>"+
+                    "<div class='col-4'>"+value.subject+"</div>"+
+                    "<div class='col-3'>"+value.message+"</div>"+
+                    "<div class='col-1' onclick='edit("+value.id+")'><i class='fa-solid fa-pen-to-square'></i></div>"
                 );
             });
         });

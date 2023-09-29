@@ -37,7 +37,7 @@ public class AjaxController {
     @PostMapping("/saveEmail")
     public Email saveEmail(@RequestBody Email email) {
         if (email.getTo().isEmpty()) {
-            throw new RuntimeException("Поле 'Кому' не должно быть пустым");
+            throw new RuntimeException("Поле 'Ваш e-mail для обратной связи' не должно быть пустым");
         }
         Email previousEmail = emailService.getEmailById(email.getId());
         previousEmail.setMessage(email.getMessage());
