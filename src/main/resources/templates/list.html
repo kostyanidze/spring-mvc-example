@@ -34,19 +34,27 @@
                         Возможные направления турполёта
                     </a>
                     <ul class="dropdown-menu">
-                        <div style="font-weight: bold" >
-                            <div style="text-align: center;">Азия</div>
-                        </div>
-                        <li><a class="dropdown-item" href="#">Китай</a></li>
-                        <li><a class="dropdown-item" href="#">Япония</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#" style="font-weight: bold; text-align: center">Азия</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Китай</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Япония</a>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <div style="font-weight: bold" >
-                            <div style="text-align: center;">Северная америка</div>
-                        </div>
-                        <li><a class="dropdown-item" href="#">Канада</a></li>
-                        <li><a class="dropdown-item" href="#">Соединенные штаты Америки</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#" style="font-weight: bold; text-align: center">Северная америка</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Канада</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Соединенные штаты Америки</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -78,28 +86,7 @@
                 <div class="col-4" th:text="${email.subject}"/>
                 <div class="col-4" th:text="${email.message}"/>
             </div>
-
-            <!--<table class="table table-striped">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Кому</th>
-                    <th scope="col">Тема</th>
-                    <th scope="col">Сообщение</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="email: ${emails}">
-                    <td th:text="${email.to}">
-                    </td>
-                    <td th:text="${email.subject}">
-                    </td>
-                    <td th:text="${email.message}">
-                    </td>
-                </tr>
-                </tbody>
-            </table>-->
             <a class="btn btn-primary" href="/">Отправить другое сообщение</a>
-<!--            <img src="img/logo.png"/>-->
         </div>
     </div>
 </div>

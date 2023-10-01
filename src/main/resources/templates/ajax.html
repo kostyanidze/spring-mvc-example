@@ -10,8 +10,18 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jquery-3.6.1.min.js"></script>
     <script src="/js/ajax.js"></script>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #c73aef, #c6ff00);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 <body>
+
+
 <!-- компонент меню-->
 <nav class="navbar navbar-expand-lg bg-success">
     <div class="container-fluid">
@@ -32,21 +42,32 @@
                     <a class="nav-link" href="/ajax">Динамическая страница</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="dropdown" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Возможные направления турполёта
                     </a>
-                    <ul class="dropdown-menu" style="font-weight: bold;text-align: center;">Азия"
-            <li><a class="dropdown-item" href="#">Китай</a></li>
-            <li><a class="dropdown-item" href="#">Япония</a></li>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#" style="font-weight: bold; text-align: center">Азия</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Китай</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Япония</a>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <div style="font-weight: bold" >
-                            <div style="text-align: center;">Северная америка</div>
-                        </div>
-                        <li><a class="dropdown-item" href="#">Канада</a></li>
-                        <li><a class="dropdown-item" href="#">Соединенные штаты Америки</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#" style="font-weight: bold; text-align: center">Северная америка</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Канада</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Соединенные штаты Америки</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -57,7 +78,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="font-size: 2.1vw; font-size: 2.1vh; background-image: url('large_1.jpg')">
+<div class="container-fluid" style="font-size: 1.8vw; font-size: 1.8vh">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-sm-12">
@@ -76,12 +97,11 @@
             <div class="row" id="records">
             </div>
             <a class="btn btn-primary" href="/">Отправить другое сообщение</a>
-            <!-- <img src="img/large_1.jpg"/> -->
         </div>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
+         aria-hidden="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
