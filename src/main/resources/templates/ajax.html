@@ -13,7 +13,7 @@
 </head>
 <body>
 <!-- компонент меню-->
-<nav class="navbar navbar-expand-lg b">
+<nav class="navbar navbar-expand-lg bg-success">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Турфирма «3 кита»</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -57,7 +57,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="font-size: 2.1vw; font-size: 2.1vh">
+<div class="container-fluid" style="font-size: 2.1vw; font-size: 2.1vh; background-image: url('large_1.jpg')">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 col-sm-12">
@@ -76,7 +76,7 @@
             <div class="row" id="records">
             </div>
             <a class="btn btn-primary" href="/">Отправить другое сообщение</a>
-            <!--            <img src="img/logo.png"/>-->
+            <!-- <img src="img/large_1.jpg"/> -->
         </div>
     </div>
     <!-- Modal -->
@@ -86,7 +86,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#editModal').modal('hide');">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#editModal').modal('hide');">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                            onclick="$('#editModal').modal('hide');">Close
+                            onclick="$('#editModal').modal('hide');">Закрыть
                     </button>
                     <button type="button" class="btn btn-primary" onclick="save()">Сохранить</button>
                 </div>
